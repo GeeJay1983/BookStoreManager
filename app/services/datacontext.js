@@ -2,17 +2,34 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('app').factory(serviceId, ['common', datacontext]);
+    angular.module('app').factory(serviceId, ['common', '$http', datacontext]);
 
-    function datacontext(common) {
+    function datacontext(common, $http) {
+        var getLogFn = common.logger.getLogFn;
+        var log = getLogFn(serviceId);
+        var logError = getLogFn(serviceId, 'error');
+
         var $q = common.$q;
+        var baseUrl = 'http://localhost:49352/';
 
         var service = {
             getFeaturedBooks: getFeaturedBooks,
-            getMessageCount: getMessageCount
+            getMessageCount: getMessageCount,
+            saveNewBook: saveNewBook
         };
 
         return service;
+
+        function saveNewBook(book) {
+            return $http.post(baseUrl + "Book", book)
+            .then(function (result) {
+                book.id = result.data.id;
+                log("succes, saved! ", +JSON.stringify(book))
+            },
+            function (data, status) {
+                logError("New Book Save Failed!");
+            });
+        }
 
         function getMessageCount() { return $q.when(72); }
 

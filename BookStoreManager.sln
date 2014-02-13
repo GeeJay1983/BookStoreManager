@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{68C500
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService", "BookService\BookService.csproj", "{A49CB758-5457-4397-9DE2-CEA9F06F19C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{75CA31DA-578D-4DD5-8651-9FBA7EFBB215}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CA31DA-578D-4DD5-8651-9FBA7EFBB215}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CA31DA-578D-4DD5-8651-9FBA7EFBB215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A49CB758-5457-4397-9DE2-CEA9F06F19C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49CB758-5457-4397-9DE2-CEA9F06F19C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49CB758-5457-4397-9DE2-CEA9F06F19C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49CB758-5457-4397-9DE2-CEA9F06F19C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

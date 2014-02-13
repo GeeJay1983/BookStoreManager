@@ -39,6 +39,16 @@
                         content: '<i class="fa fa-lock"></i> Admin'
                     }
                 }
+            }, {
+                url: '/book',
+                config: {
+                    title: 'bookEditor',
+                    templateUrl: 'app/bookEditor/bookEditor.html',
+                    settings: {
+                        nav: 3,
+                        content: '<i class="icon-book"></i> Book Editor'
+                    }
+                }
             }
         ];
     }
